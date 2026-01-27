@@ -163,14 +163,3 @@ L: {x1=5, x2=1}
 5) **hoch 2**: Quadrat (x² → `x hoch 2`).
 
 ---
-
-## **8. Geschätzte Abdeckung**
-| Bereich               | Abdeckung (%) |
-|-----------------------|--------------|
-| Theorie (Kapitel 6)    | 95%          |
-| Praxis (Kapitel 6)    | 90%          |
-| Theorie (Kapitel 7)    | 90%          |
-| Praxis (Kapitel 7)    | 85%          |
-| Lehrer-Muster         | 80%          |
-
-**Hinweis**: Die Abdeckung gilt für Standard-Prüfungsfragen. Komplexe Aufgaben erfordern ggf. zusätzliche Logik.
