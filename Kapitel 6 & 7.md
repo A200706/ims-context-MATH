@@ -19,15 +19,15 @@ Dieses Dokument dient als zentrales Nachschlagewerk für die Kapitel 6 (Quadrati
 ### Beispiel (pq-Formel):
 ```
 D: R
-1) x hoch 2 - 6x + 5 = 0
-2) p = -6
-3) q = 5
-4) x = (-p 2tel) + sqrt((p 2tel) hoch 2 - q)   [pq]
-5) x = (-p 2tel) - sqrt((p 2tel) hoch 2 - q)   [pq]
-6) x = 3 + sqrt(9 - 5)   [rechnen]
-7) x = 3 - sqrt(9 - 5)   [rechnen]
-8) x = 5
-9) x = 1
+*1)* x hoch 2 - 6x + 5 = 0
+*2)* p = -6
+*3)* q = 5
+*4)* x = (-p 2tel) + sqrt((p 2tel) hoch 2 - q)   [pq]
+*5)* x = (-p 2tel) - sqrt((p 2tel) hoch 2 - q)   [pq]
+*6)* x = 3 + sqrt(9 - 5)   [rechnen]
+*7)* x = 3 - sqrt(9 - 5)   [rechnen]
+*8)* x = 5
+*9)* x = 1
 L: {x1=5, x2=1}
 ```
 
@@ -49,10 +49,10 @@ L: {x1=5, x2=1}
 3) Beispiel:
    ```
    D: R
-   1) x hoch 2 - 5x + 6 = 0
-   2) (x - 2)(x - 3) = 0   [faktor]
-   3) x = 2   [loesen]
-   4) x = 3   [loesen]
+   *1)* x hoch 2 - 5x + 6 = 0
+   *2)* (x - 2)(x - 3) = 0   [faktor]
+   *3)* x = 2   [loesen]
+   *4)* x = 3   [loesen]
    L: {x1=2, x2=3}
    ```
 
@@ -61,11 +61,11 @@ L: {x1=5, x2=1}
 2) Beispiel:
    ```
    D: R
-   1) x hoch 2 - 6x + 5 = 0
-   2) (x - 3) hoch 2 - 4 = 0   [ergänzen]
-   3) x - 3 = ±2   [√]
-   4) x = 3 + 2   [+2]
-   5) x = 3 - 2   [-2]
+   *1)* x hoch 2 - 6x + 5 = 0
+   *2)* (x - 3) hoch 2 - 4 = 0   [ergänzen]
+   *3)* x - 3 = ±2   [√]
+   *4)* x = 3 + 2   [+2]
+   *5)* x = 3 - 2   [-2]
    L: {x1=5, x2=1}
    ```
 
@@ -74,11 +74,11 @@ L: {x1=5, x2=1}
 2) Beispiel:
    ```
    D: R
-   1) x hoch 2 - 6x + 5 = 0
-   2) p = -6
-   3) q = 5
-   4) x = 3 + sqrt(9 - 5)   [pq]
-   5) x = 3 - sqrt(9 - 5)   [pq]
+   *1)* x hoch 2 - 6x + 5 = 0
+   *2)* p = -6
+   *3)* q = 5
+   *4)* x = 3 + sqrt(9 - 5)   [pq]
+   *5)* x = 3 - sqrt(9 - 5)   [pq]
    L: {x1=5, x2=1}
    ```
 
@@ -87,11 +87,11 @@ L: {x1=5, x2=1}
 2) Beispiel:
    ```
    D: R
-   1) 2x hoch 2 - 8x + 6 = 0
-   2) a = 2, b = -8, c = 6
-   3) x = (8 ± sqrt(64 - 48)) / 4   [abc]
-   4) x = (8 + 4) / 4   [+]
-   5) x = (8 - 4) / 4   [-]
+   *1)* 2x hoch 2 - 8x + 6 = 0
+   *2)* a = 2, b = -8, c = 6
+   *3)* x = (8 ± sqrt(64 - 48)) / 4   [abc]
+   *4)* x = (8 + 4) / 4   [+]
+   *5)* x = (8 - 4) / 4   [-]
    L: {x1=3, x2=1}
    ```
 
@@ -116,10 +116,10 @@ L: {x1=5, x2=1}
 1) Beispiel:
    ```
    D: x ∈ ℕ
-   1) x hoch 2 = x + 5   [gleich]
-   2) x hoch 2 - x - 5 = 0   [umformen]
-   3) p = -1, q = -5
-   4) x = 0.5 ± sqrt(0.25 + 5)   [pq]
+   *1)* x hoch 2 = x + 5   [gleich]
+   *2)* x hoch 2 - x - 5 = 0   [umformen]
+   *3)* p = -1, q = -5
+   *4)* x = 0.5 ± sqrt(0.25 + 5)   [pq]
    L: {x1=2.79, x2=-2.29} → Nur x1=3 gültig (ℕ)
    ```
 
@@ -127,8 +127,8 @@ L: {x1=5, x2=1}
 1) Beispiel:
    ```
    D: Alter in Jahren, x > 0
-   1) (A - 5) = 2(B - 5)   [gleich]
-   2) A = 2B - 5   [umstellen]
+   *1)* (A - 5) = 2(B - 5)   [gleich]
+   *2)* A = 2B - 5   [umstellen]
    ```
 
 ---
