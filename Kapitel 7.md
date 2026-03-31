@@ -1,576 +1,393 @@
-# SUPER-MD — KAP 7: Gleichungen Textaufgaben (ohne 7.7)
-# IMS BWD Bern | IM25A | Probe2_2 — 01.04.2026
-
-> **Zweck**: Dieses Dokument ist die einzige Wissensquelle für die KI.
-> Lies es VOLLSTÄNDIG, bevor du antwortest.
-> Antworte NUR basierend auf diesem Inhalt.
+# SUPER-MD — KAP 7 PRÜFUNG (7.2 / 7.3 / 7.4 / 7.5 / 7.10)
 
 ---
 
-## [QUICK-ROUTER] Fragetyp erkennen
+## QR — QUICK ROUTER
 
-Lies die Aufgabe. Finde Schlüsselwörter → wähle den passenden T-Block:
+Lies die Aufgabe → erkenne den Typ → springe zum Block:
 
-| Schlüsselwörter | → Route |
-|---|---|
-| Zahl, Ziffer, Bruch, Zähler, Nenner, Stellenwert, zweistellig, dreistellig, Produkt zweier Zahlen, Summe zweier Zahlen, Differenz zweier Zahlen | → T-ZAHL |
-| alt, Jahre, Mutter, Vater, Tochter, Sohn, heute, vor … Jahren, in … Jahren | → T-ALTER |
-| Kapital, Zins, verzinst, Sparkonto, Bankkonto, Prozentpunkt, Zinssatz, Jahreszins, Marchzins, Zinsgutschrift, Darlehen | → T-ZINS |
-| aufgeteilt, verteilt, erhält, Anteil, Gewinn, Lottogewinn, Kosten … aufgeteilt, Firmen | → T-VERT |
-| Mischung, Gehalt, Spiritus, Alkohol, Mehl, Sorte, Legierung, Kakao, Tee, Preis pro kg | → T-MISCH |
-| Geschwindigkeit, km/h, Strecke, fährt, Zug, Auto, Radfahrer, kreuzen, überholt, entgegen | → T-BEWEG |
-| Rechteck, Quadrat, Fläche, Flächeninhalt, Umfang, Seite, cm, m², verlängert, verkürzt | → T-GEO |
-| Alles andere (Treppe, Stufen, Verein, Bus, Einkauf, Hemden, Orangen, Mitglieder) | → T-DIV |
+| Schlüsselwörter | Typ | Block |
+|---|---|---|
+| Zahl, Summe, Produkt, Differenz, aufeinanderfolgende | Zahlenaufgabe | T-ZAHL |
+| Alter, Jahre, älter, jünger, vor … Jahren, in … Jahren | Altersaufgabe | T-ALTER |
+| Kapital, Zins, Zinssatz, %, Marchzins, Guthaben, Bank | Zinsaufgabe | T-ZINS |
+| verteilen, Verhältnis, aufteilen, Anteil, mehr als, doppelt | Verteilungsaufgabe | T-VERT |
+| keines der obigen / gemischt / Alltagsproblem | Diverses | T-DIV |
 
----
-
-## [MICRO-INDEX] Token-Verzeichnis
-
-**QT-Tokens (Antwort-Schablonen):**
-- QT-TAB → Analyse-Tabelle (IMMER verwenden — gibt Punkte!)
-- QT-EQ1 → Gleichung mit 1 Unbekannten lösen
-- QT-EQ2 → Gleichungssystem mit 2 Unbekannten lösen
-- QT-QUAD → Quadratische Gleichung (abc-Formel)
-- QT-BRUCH → Bruchgleichung (Hauptnenner)
-
-**T-Tokens (Themenblöcke):**
-- T-ZAHL → Zahlenaufgaben (7.2)
-- T-ALTER → Altersaufgaben (7.3)
-- T-ZINS → Kapital und Zins (7.4)
-- T-VERT → Verteilungsaufgaben (7.5)
-- T-MISCH → Mischungsaufgaben (7.6)
-- T-BEWEG → Bewegung (7.8)
-- T-GEO → Geometrie (7.9)
-- T-DIV → Diverses (7.10)
-
-**X-Tokens (Fallen/Referenz):**
-- X-TRAP → Häufige Fehler pro Thema
-- X-FORMELN → Alle Formeln (LaTeX)
-- X-GLOSSAR → Deutsche Mathe-Begriffe
+**MODUS-CHECK** (vor dem Lösen!):
+- Frage sagt "aufstellen", "Tabelle", "Gleichung formulieren", "nicht lösen" → **MODUS-TAB** (nur Tabelle + D, STOP)
+- Frage sagt "lösen", "berechnen", "bestimmen", "wie viel" → **MODUS-VOLL** (Tabelle + D + Lösung + Antwortsatz)
 
 ---
 
-## [WORKFLOW] Universelle 7-Schritte-Methode
+## MI — MICRO INDEX
 
-Jede Textaufgabe wird so gelöst:
-
-1. **Analyse** → Aufgabe lesen, Tabelle aufstellen (QT-TAB), Beziehungen identifizieren
-2. **Variable** → x = gesuchte Grösse definieren (evtl. y bei 2 Unbekannten)
-3. **Gleichung** → Aus Tabelle die Gleichung(en) aufstellen
-4. **D** → Definitionsmenge angeben (z.B. D = Q⁺, D = N, D = Q⁺\{0})
-5. **Lösen** → Gleichung Schritt für Schritt lösen (QT-EQ1/EQ2/QUAD/BRUCH)
-6. **L / Antwortsatz** → Lösungsmenge + vollständiger Antwortsatz mit Einheiten
-7. **Probe** → Nur wenn explizit verlangt oder Platz vorhanden
+- QR: Quick Router
+- QT-TAB: Tabellen-Template
+- QT-EQ: Gleichung-Aufstell-Template
+- QT-QUAD: Quadratische Gleichung (abc-Formel)
+- T-ZAHL: Zahlenaufgaben (7.2)
+- T-ALTER: Altersaufgaben (7.3)
+- T-ZINS: Zinsaufgaben (7.4) ⭐ PRIORITÄT 1
+- T-VERT: Verteilungsaufgaben (7.5)
+- T-DIV: Diverses (7.10)
+- X-TRAP: Fallen & häufige Fehler
+- X-FORM: Formelsammlung
+- X-GLOSS: Glossar
 
 ---
 
-## [ANSWER-RULES] Ausgabeformat — STRIKT
+## WF — WORKFLOW (für jede Aufgabe)
 
-### Formatregeln (HARD):
-- Jede Zeile beginnt mit n) → 1), 2), 3), …
-- KEIN "Schritt"-Header, KEIN "Zusammenfassend", KEIN Meta-Kommentar
-- Genau EINE Gleichung/Aktion pro nummerierte Zeile
-- Operationen IMMER am Ende in [ ] → z.B. `[| ·100]` oder `[| ausmultiplizieren]`
-- Brüche in LaTeX: `\frac{a}{b}` (nie a/b)
-- Wenn Zeile zu lang → aufteilen in zwei nummerierte Zeilen
-- Sprache: Deutsch, Schulniveau Sek II
-- IMMER: Tabelle → Variable → Gleichung → D → Lösung → Antwortsatz
-
-### Tabelle (QT-TAB) — IMMER ausgeben:
 ```
-Tabelle:
-| | Grösse 1 | Grösse 2 | Beziehung |
-|---|---|---|---|
-| Zeile 1 | Wert | Wert | ... |
-| Zeile 2 | Wert | Wert | ... |
+1) 📷 OCR-Check (2–4 Wörter)
+2) QR → Typ erkennen
+3) Modus-Check → TAB oder VOLL?
+4) Variable(n) definieren
+5) QT-TAB → Tabelle aufstellen
+6) D = ... (Definitionsmenge)
+   --- WENN MODUS-TAB → STOP HIER ---
+7) Gleichung aus Tabelle ableiten
+8) Lösen (nummerierte Zeilen, [Operation])
+9) L = {...}
+10) Antwortsatz
 ```
-Zeilen und Spalten BESCHRIFTEN. Gibt Punkte auch bei falschem Rechenweg!
 
-### Beispiel einer perfekten Ausgabe:
+---
 
-**Aufgabe:** Die Mutter ist heute 5-mal so alt wie ihre Tochter. In 6 Jahren wird sie nur noch 3-mal so alt sein. Wie alt sind Mutter und Tochter heute?
+## AR — ANSWER RULES
 
-**Ausgabe:**
+### Formatregeln (STRIKT)
+- Jede Zeile: `n)` dann Inhalt
+- ALLES Mathematische in LaTeX: `$...$`
+- Operationen am Ende in `[...]`
+- Brüche: `$\frac{a}{b}$` (nie a/b)
+- Kein "Schritt", kein "Zusammenfassend", keine Meta-Texte
+- Text in LaTeX: `$\text{...}$`
+- Maximal 1 Gleichung/Aktion pro Zeile
 
-Tabelle:
-| | Mutter | Tochter |
+### Modus-TAB (nur Tabelle + D)
+- Nur: 📷 → Variablen → Tabelle → D → STOP
+- Keine Lösung, kein Antwortsatz
+- ~5–8 Zeilen total
+
+### Modus-VOLL (komplette Lösung)
+- 📷 → Variablen → Tabelle → D → Gleichung → Lösen → L → Antwortsatz
+- ~12–25 Zeilen total
+
+---
+
+## QT-TAB — TABELLEN-TEMPLATE
+
+Vertikale LaTeX-Liste (kein Markdown-Table!):
+
+```
+n) $\text{[Person/Objekt 1]:} \quad x$
+n+1) $\text{[Person/Objekt 2]:} \quad 2x$
+n+2) $\text{[Bedingung]:} \quad x + 2x = \text{Total}$
+```
+
+Für Zinsaufgaben:
+```
+n) $K_1 = x, \quad K_2 = ...$
+n+1) $p_1 = ...\%, \quad p_2 = ...\%$
+n+2) $t = ... \text{ Monate}$
+n+3) $Z_1 = K_1 \cdot \frac{p_1}{100} \cdot \frac{t}{12}$
+```
+
+---
+
+## QT-EQ — GLEICHUNG AUFSTELLEN
+
+```
+n) $\text{Bedingung: [in Worten]}$
+n+1) $[\text{linke Seite}] = [\text{rechte Seite}]$
+```
+
+---
+
+## QT-QUAD — QUADRATISCHE GLEICHUNG (abc-Formel)
+
+```
+n) $ax^2 + bx + c = 0$
+n+1) $a = ..., \quad b = ..., \quad c = ...$
+n+2) $D = b^2 - 4ac = ...$
+n+3) $x_{1,2} = \frac{-b \pm \sqrt{D}}{2a}$
+n+4) $x_1 = ..., \quad x_2 = ...$
+n+5) Prüfe: passt $x_1$ / $x_2$ zur D?
+```
+
+---
+
+## T-ZAHL — ZAHLENAUFGABEN (7.2)
+
+### Typische Muster
+
+**Zwei Zahlen, Summe + Bedingung:**
+```
+1) $x = \text{1. Zahl}$
+2) $y = \text{2. Zahl}$
+3) $\text{Summe:} \quad x + y = S$
+4) $\text{Bedingung:} \quad x = 2y + k$ (o.ä.)
+5) $\text{Einsetzen:} \quad (2y + k) + y = S$
+```
+
+**Aufeinanderfolgende Zahlen:**
+```
+1) $x = \text{1. Zahl}$
+2) $x+1 = \text{2. Zahl}, \quad x+2 = \text{3. Zahl}$
+3) $x + (x+1) + (x+2) = S$
+```
+
+**Ziffern einer Zahl:**
+```
+1) $z = \text{Zehnerziffer}, \quad e = \text{Einerziffer}$
+2) $\text{Zahl} = 10z + e$
+3) $\text{Umgekehrt} = 10e + z$
+```
+
+### D typisch
+$D = \mathbb{R}$ oder $D = \mathbb{Z}$ oder $D = \mathbb{N}$
+
+---
+
+## T-ALTER — ALTERSAUFGABEN (7.3)
+
+### Schlüssel-Prinzip
+> Zeitdifferenz ist für alle Personen gleich.
+> "Vor 5 Jahren" → alle minus 5. "In 3 Jahren" → alle plus 3.
+
+### Tabellen-Setup
+
+```
+1) $x = \text{Alter von [Person] heute}$
+2) $\text{[Person A] heute:} \quad x$
+3) $\text{[Person B] heute:} \quad x + d$ (oder $3x$, etc.)
+4) $\text{Vor } n \text{ Jahren: A} = x - n, \quad \text{B} = (x+d) - n$
+5) $\text{In } m \text{ Jahren: A} = x + m, \quad \text{B} = (x+d) + m$
+```
+
+### Typische Bedingungen
+- "A ist doppelt so alt wie B" → $A = 2B$
+- "Vor 5 Jahren war A 3-mal so alt wie B" → $(x-5) = 3(y-5)$
+- "Summe der Alter = S" → $x + y = S$
+- "In 10 Jahren ist A nur noch 2-mal so alt" → $(x+10) = 2(y+10)$
+
+### D typisch
+$D = \mathbb{R}^+$ (Alter muss positiv sein)
+
+---
+
+## T-ZINS — ZINSAUFGABEN (7.4) ⭐ PRIORITÄT 1
+
+### Grundformel (MARCHZINS)
+
+$$Z = K \cdot \frac{p}{100} \cdot \frac{M}{12}$$
+
+- $K$ = Kapital (CHF)
+- $p$ = Zinssatz (%)
+- $M$ = Anzahl Monate (bei Jahren: $M = 12$)
+- $Z$ = Zins (CHF)
+
+### Varianten
+
+**Nach K auflösen:**
+$$K = \frac{Z \cdot 100 \cdot 12}{p \cdot M}$$
+
+**Nach p auflösen:**
+$$p = \frac{Z \cdot 100 \cdot 12}{K \cdot M}$$
+
+**Nach M auflösen:**
+$$M = \frac{Z \cdot 100 \cdot 12}{K \cdot p}$$
+
+### Aufgaben-Typen
+
+**Typ 1: Zwei Kapitalien, Zinsdifferenz**
+```
+1) $K_1 = x, \quad K_2 = x + d$ (oder $\text{Total} - x$)
+2) $Z_1 = x \cdot \frac{p_1}{100} \cdot \frac{M}{12}$
+3) $Z_2 = (x+d) \cdot \frac{p_2}{100} \cdot \frac{M}{12}$
+4) Bedingung: $Z_1 + Z_2 = \text{Gesamtzins}$ oder $Z_1 - Z_2 = \text{Differenz}$
+```
+
+**Typ 2: Vertauschte Zinssätze**
+```
+1) $\text{Fall A:} \quad Z_A = K_1 \cdot \frac{p_1}{100} \cdot \frac{M}{12} + K_2 \cdot \frac{p_2}{100} \cdot \frac{M}{12}$
+2) $\text{Fall B (vertauscht):} \quad Z_B = K_1 \cdot \frac{p_2}{100} \cdot \frac{M}{12} + K_2 \cdot \frac{p_1}{100} \cdot \frac{M}{12}$
+3) $Z_A - Z_B = \text{Differenz}$ (oder umgekehrt)
+```
+
+**Typ 3: Kapital + Zins nach t Jahren**
+```
+1) $\text{Endkapital} = K + Z$
+2) $\text{Endkapital} = K + K \cdot \frac{p}{100} \cdot \frac{M}{12}$
+3) $\text{Endkapital} = K \left(1 + \frac{p}{100} \cdot \frac{M}{12}\right)$
+```
+
+**Typ 4: Ein-/Auszahlung zwischen Perioden**
+```
+1) $\text{Nach 1. Periode:} \quad K_1 = K_0 + Z_0 \pm \text{Einzahlung}$
+2) $\text{Neuer Zins:} \quad Z_1 = K_1 \cdot \frac{p}{100} \cdot \frac{M}{12}$
+```
+
+### D typisch
+$D = \mathbb{R}^+$ oder $D = \mathbb{Q}^+$ (Kapital/Zins positiv)
+
+### ⚠️ Zins-Fallen
+- Monate vs. Jahre: Formel braucht MONATE → $M = 12$ für 1 Jahr!
+- "Jahreszins" → $M = 12$, "Halbjahr" → $M = 6$, "Quartal" → $M = 3$
+- Prozent vs. Dezimal: $p$ bleibt als %, Division durch 100 in Formel
+- Vertauschte Zinssätze: Differenz-Gleichung aufstellen, nicht einzeln lösen
+
+---
+
+## T-VERT — VERTEILUNGSAUFGABEN (7.5)
+
+### Schlüssel-Prinzip
+> Gesamtmenge = Summe aller Anteile.
+> Jeder Anteil wird durch x ausgedrückt.
+
+### Aufgaben-Typen
+
+**Typ 1: Verhältnis-Verteilung (a : b : c)**
+```
+1) $\text{Verhältnis } a : b : c$
+2) $\text{A} = a \cdot k, \quad \text{B} = b \cdot k, \quad \text{C} = c \cdot k$
+3) $a \cdot k + b \cdot k + c \cdot k = \text{Total}$
+4) $k \cdot (a + b + c) = \text{Total}$
+5) $k = \frac{\text{Total}}{a + b + c}$
+```
+
+**Typ 2: Bedingungs-Verteilung**
+```
+1) $x = \text{Anteil von [kleinste/Referenz]}$
+2) $\text{A} = x$
+3) $\text{B} = 2x$ ("doppelt so viel")
+4) $\text{C} = x + 50$ ("CHF 50 mehr")
+5) $x + 2x + (x + 50) = \text{Total}$
+```
+
+**Typ 3: Prozent-Verteilung**
+```
+1) $x = \text{Gesamtbetrag}$
+2) $\text{A} = 0.30 \cdot x$ (30%)
+3) $\text{B} = 0.45 \cdot x$ (45%)
+4) $\text{C} = x - 0.30x - 0.45x = 0.25x$ (Rest)
+5) Bedingung einsetzen und lösen
+```
+
+**Typ 4: Mischform (Verhältnis + Zusatzbedingung)**
+```
+1) $\text{A} = 2x, \quad \text{B} = 3x$
+2) $\text{Zusatz: A bekommt CHF 100 extra}$
+3) $2x + 100 + 3x = \text{Total}$
+```
+
+### D typisch
+$D = \mathbb{R}^+$ (Anteile positiv) oder $D = \mathbb{Q}^+$
+
+### ⚠️ Verteilungs-Fallen
+- "Mehr als" ≠ "mal so viel": $x + 50$ vs. $50x$
+- Verhältnis 2:3 heisst NICHT A=2, B=3 → A=2k, B=3k
+- Gesamtmenge prüfen: Summe aller Anteile = Total?
+- Einheiten: CHF, kg, Liter — konsistent bleiben
+
+---
+
+## T-DIV — DIVERSES (7.10)
+
+### Schlüssel-Prinzip
+> Alltagsprobleme → in Gleichung übersetzen.
+> Oft Kombination aus mehreren Themen.
+
+### Häufige Muster
+
+**Preis/Kosten-Aufgaben:**
+```
+1) $x = \text{Preis pro Stück}$
+2) $n \cdot x = \text{Gesamtkosten}$
+3) $(n + k) \cdot (x - r) = \text{Gesamtkosten}$ (mehr Stücke, weniger pro Stück)
+```
+
+**Arbeiter/Leistung:**
+```
+1) $x = \text{Leistung pro Person/Stunde}$
+2) $n \cdot x \cdot t = \text{Gesamtarbeit}$
+```
+
+**Gewinn/Verlust:**
+```
+1) $\text{Gewinn} = \text{Verkauf} - \text{Einkauf}$
+2) $\text{Verkauf} = \text{Einkauf} \cdot (1 + \frac{g}{100})$
+```
+
+**Strecke/Weg (einfach):**
+```
+1) $s = v \cdot t$
+2) $\text{Hin:} \quad s = v_1 \cdot t_1$
+3) $\text{Zurück:} \quad s = v_2 \cdot t_2$
+4) $t_1 + t_2 = t_{\text{total}}$
+```
+
+### D typisch
+Kontextabhängig — meistens $D = \mathbb{R}^+$
+
+---
+
+## X-TRAP — FALLEN & HÄUFIGE FEHLER
+
+| # | Falle | Fix |
 |---|---|---|
-| Heute | 5x | x |
-| In 6 Jahren | 5x + 6 | x + 6 |
-
-Beziehung: Alter Mutter in 6 J. = 3 · Alter Tochter in 6 J.
-
-1) x = Alter der Tochter heute
-2) 5x + 6 = 3(x + 6)
-3) D = \mathbb{N}
-4) 5x + 6 = 3x + 18 [| ausmultiplizieren]
-5) 2x + 6 = 18 [| -3x]
-6) 2x = 12 [| -6]
-7) x = 6 [| :2]
-8) Alter Mutter: 5 \cdot 6 = 30
-9) Die Mutter ist heute 30 Jahre, die Tochter 6 Jahre alt.
+| 1 | D vergessen | IMMER D schreiben, auch wenn offensichtlich |
+| 2 | Antwortsatz vergessen | Letzter Punkt = ganzer Satz mit Einheit |
+| 3 | Vorzeichen beim Auflösen | Minus × Minus = Plus! |
+| 4 | Klammer nicht ausmultipliziert | Jedes Glied in der Klammer! |
+| 5 | Monate vs. Jahre (Zins) | Formel braucht M (Monate), nicht Jahre |
+| 6 | Prozent als Dezimal vergessen | $p\%$ → $\frac{p}{100}$ in Rechnung |
+| 7 | "Mehr als" vs. "mal so viel" | $+k$ vs. $\cdot k$ — genau lesen! |
+| 8 | Verhältnis falsch aufgesetzt | $2:3$ → $2k$ und $3k$, nicht $2$ und $3$ |
+| 9 | Negative Lösung bei Alter/Geld | Prüfe: passt Lösung zum Kontext? |
+| 10 | Tabelle nicht beschriftet | Zeilen/Spalten IMMER benennen → gibt Punkte! |
 
 ---
 
-## [QT-TAB] Analyse-Tabelle — Vorlagen pro Typ
+## X-FORM — FORMELSAMMLUNG
 
-### Altersaufgabe:
-| | Person A | Person B |
-|---|---|---|
-| Heute | ... | x |
-| Vor n Jahren | ... | x - n |
-| In n Jahren | ... | x + n |
+### Zins (Marchzins)
+$$Z = K \cdot \frac{p}{100} \cdot \frac{M}{12}$$
 
-### Zinsaufgabe:
-| | Kapital 1 | Kapital 2 |
-|---|---|---|
-| Guthaben | x | ... |
-| Zinssatz (%) | ... | ... |
-| Zeit | ... | ... |
-| Zins | \frac{K \cdot p \cdot M}{100 \cdot 12} | \frac{K \cdot p \cdot M}{100 \cdot 12} |
-
-### Verteilungsaufgabe:
-| Person | Anteil |
-|---|---|
-| A | x |
-| B | ... (in x ausdrücken) |
-| C | ... (in x ausdrücken) |
-| **Total** | **Gesamtbetrag** |
-
-### Mischungsaufgabe:
-| | Komponente 1 | Komponente 2 | Mischung |
-|---|---|---|---|
-| Menge | ... | ... | Summe |
-| Gehalt (%) | ... | ... | x |
-| Reinmenge | Menge₁ · Gehalt₁ | Menge₂ · Gehalt₂ | Summe · x |
-
-### Bewegungsaufgabe:
-| | Objekt A | Objekt B |
-|---|---|---|
-| v (km/h) | ... | ... |
-| t (h) | x | x (oder x ± Δt) |
-| s (km) | v_A · t_A | v_B · t_B |
-| Gesamt | s_A + s_B = d (oder s_A = s_B) |
-
-### Geometrie:
-| | Original | Neu |
-|---|---|---|
-| Länge | ... | ... ± Δ |
-| Breite | ... | ... ± Δ |
-| Fläche | l · b | l_neu · b_neu |
-
----
-
-## [QT-EQ1] Gleichung mit 1 Unbekannten
-
-Schema:
-1) x = [Definition]
-2) [Gleichung aufstellen]
-3) D = [Definitionsmenge]
-4) [Umformung] [| Operation]
-5) [Umformung] [| Operation]
-6) x = [Ergebnis] [| letzte Operation]
-7) [Antwortsatz]
-
----
-
-## [QT-EQ2] Gleichungssystem mit 2 Unbekannten
-
-Schema (Gleichsetzungs- oder Einsetzungsverfahren):
-1) x = [Definition], y = [Definition]
-2) (1) [Gleichung 1]
-3) (2) [Gleichung 2]
-4) D = [Definitionsmenge]
-5) Aus (1): x = ... [| nach x auflösen]
-6) Einsetzen in (2): ... [| x ersetzen]
-7) [Lösen nach y] [| Operation]
-8) y = [Ergebnis]
-9) x berechnen: x = ... [| y einsetzen]
-10) [Antwortsatz]
-
-Oder Additionsverfahren:
-5) (1) · k: ... [| ·k]
-6) (2) · m: ... [| ·m]
-7) Gleichungen addieren/subtrahieren
-8) [Lösen] [| Operation]
-
----
-
-## [QT-QUAD] Quadratische Gleichung
-
-Schema (abc-Formel):
-1) [Gleichung in Normalform bringen]: ax² + bx + c = 0
-2) a = ..., b = ..., c = ...
-3) x_{1,2} = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
-4) x_{1,2} = \frac{... \pm \sqrt{...}}{...} [| einsetzen]
-5) x_1 = ..., x_2 = ...
-6) [Prüfen: Welche Lösung passt in D?]
-7) [Antwortsatz]
-
----
-
-## [QT-BRUCH] Bruchgleichung
-
-Schema:
-1) D bestimmen: Nenner ≠ 0 → D = ...
-2) Hauptnenner (HN) = ...
-3) [Gleichung] [| ·HN]
-4) [Ausmultiplizieren] [| ausmultiplizieren]
-5) [Vereinfachen und lösen] [| Operation]
-6) [Antwortsatz]
-
----
-
-## [T-ZAHL] Zahlenaufgaben (7.2)
-
-**Grundmenge:** G = Q bzw. Q × Q
-
-### Stellenwert-Muster:
-- Zweistellige Zahl mit Ziffern a, b: 10a + b
-- Dreistellige Zahl mit Ziffern a, b, c: 100a + 10b + c
-- Vierstellige Zahl: 1000a + 100b + 10c + d
-
-### "Ziffer hinzufügen"-Muster:
-- Links Ziffer d anfügen bei zweistelliger Zahl x: 100d + x (wird dreistellig)
-- Rechts Ziffer d anfügen bei zweistelliger Zahl x: 10x + d (wird dreistellig)
-- Links UND rechts Ziffer d anfügen: 1000d + 10x + d (bei zweistellig → vierstellig)
-
-### Bruch-Muster:
-- Zähler + Nenner = Summe → z + n = S
-- Bruch = \frac{z}{n}, Kehrwert = \frac{n}{z}
-- "Addiert man k zum Zähler und Nenner": \frac{z+k}{n+k} = Wert
-
-### Produkt/Summe/Differenz:
-- "Summe ist S, Differenz ist D" → x + y = S, x - y = D → löse System
-- "Produkt ist P, Summe ist S" → x · y = P, x + y = S → quadratische Gl.
-
----
-
-## [T-ALTER] Altersaufgaben (7.3)
-
-**Grundmenge:** G = N bzw. N × N (Alter = natürliche Zahlen)
-
-### Zeitverschiebungs-Muster:
-- "Heute" → Alter = x (oder 5x, etc.)
-- "Vor n Jahren" → Alter MINUS n bei ALLEN Personen
-- "In n Jahren" → Alter PLUS n bei ALLEN Personen
-
-### ⚠️ WICHTIG:
-- "x-mal so alt" = MULTIPLIKATION: Alter_A = x · Alter_B
-- "x Jahre älter" = ADDITION: Alter_A = Alter_B + x
-- NICHT verwechseln!
-
-### Typische Gleichung:
-Aussage: "In 6 Jahren ist Mutter 3-mal so alt wie Tochter"
-→ (Alter_M + 6) = 3 · (Alter_T + 6)
-
-### Setup:
-1) Tabelle mit Heute / Vor n J. / In n J. aufstellen
-2) x = Alter der jüngeren Person heute
-3) Ältere Person in x ausdrücken (z.B. 5x, x + 20, etc.)
-4) Zeitverschiebung anwenden
-5) Gleichung aus der 2. Aussage bilden
-
----
-
-## [T-ZINS] Kapital und Zins (7.4) — GRÖSSTER BLOCK
-
-**Grundmenge:** G = Q⁺ bzw. Q⁺ × Q⁺
-
-### Formeln:
-
-**Jahreszins:**
-$$Z = \frac{K \cdot p}{100}$$
-
-**Marchzins (Monate):**
-$$Z = \frac{K \cdot p \cdot M}{100 \cdot 12}$$
-
-**Marchzins (Tage):**
-$$Z = \frac{K \cdot p \cdot t}{100 \cdot 360}$$
-
-Wobei: K = Kapital, p = Zinssatz (ohne %), M = Monate, t = Tage
-
-### Muster A: Zwei Kapitalien, Gesamtzins
-Gegeben: K₁ = x, K₂ = x + d (oder K₂ = Gesamt - x)
-Zinssätze und Zeitraum bekannt.
-Gleichung: Zins₁ + Zins₂ = Gesamtzins
-
-### Muster B: Vertauschte Zinssätze (2 Gleichungen, 2 Unbekannte)
-Fall 1: K₁ zu p₁%, K₂ zu p₂% → Gesamtzins = A
-Fall 2: K₁ zu p₂%, K₂ zu p₁% → Gesamtzins = B
-→ Gleichungssystem aufstellen, Additionsverfahren verwenden
-
-### Muster C: Zinseszins über 2 Jahre (→ quadratische Gleichung)
-- Jahr 1: Kapital K₀, Zins₁ = K₀ · p/100, Kontostand = K₀ + Zins₁
-- Jahr 2: Neues Kapital = K₀ + Zins₁, Zins₂ = (K₀ + Zins₁) · p/100
-- Kontostand nach 2 Jahren = K₀ + Zins₁ + Zins₂
-- Wenn p gesucht → quadratische Gleichung in p
-
-### Muster D: Einzahlung/Abhebung zwischen Jahren
-- Nach Zinsgutschrift Jahr 1: Kontostand₁ = K₀ + Zins₁
-- Einzahlung +E oder Abhebung -A am gleichen Tag
-- Neues Kapital für Jahr 2: K₁ = Kontostand₁ ± E/A
-- Zins Jahr 2 basiert auf K₁
-
-### Muster E: Zinssatz-Änderung
-- Jahr 1: Zinssatz p
-- Jahr 2: Zinssatz p + Δ (erhöht) oder p - Δ (gesenkt)
-- Δ = Prozentpunkte (NICHT Prozent!)
-
-### ⚠️ FALLEN:
-- Prozentpunkte vs. Prozent: "0.5 Prozentpunkte höher" → p + 0.5 (NICHT p · 1.005)
-- Marchzins: M/12 NICHT vergessen! 8 Monate = \frac{8}{12} = \frac{2}{3}
-- Zinseszins: Zins wird zum Kapital addiert → neues Kapital
-- "Gleicher Jahreszins" bei verschiedenen Kapitalien → K₁·p₁ = K₂·p₂
-
-### Beispiel-Setup (Muster A):
-Tabelle:
-| | Kleineres Kapital | Grösseres Kapital |
-|---|---|---|
-| Guthaben | x | x + 13'000 |
-| Zinssatz | 1.5% | 1.25% |
-| Zeit | 8 Monate | 8 Monate |
-| Zins | \frac{x \cdot 1.5 \cdot 8}{100 \cdot 12} | \frac{(x+13000) \cdot 1.25 \cdot 8}{100 \cdot 12} |
-
-Gleichung: Zins₁ + Zins₂ = 585
-
----
-
-## [T-VERT] Verteilungsaufgaben (7.5)
-
-**Grundmenge:** G = Q⁺ bzw. Q⁺ × Q⁺
-
-### Kernprinzip:
-ALLE Anteile durch EINE Variable x ausdrücken, dann:
-Summe aller Anteile = Gesamtbetrag
-
-### Prozent-Muster:
-| Ausdruck | Bedeutung | Formel |
-|---|---|---|
-| "50% mehr als x" | x plus die Hälfte von x | 1.5x |
-| "20% weniger als x" | x minus ein Fünftel | 0.8x |
-| "25% mehr als x" | | 1.25x |
-| "40% weniger als x" | | 0.6x |
-| "Doppelt so viel wie x" | | 2x |
-| "Die Hälfte von x" | | 0.5x |
-| "Ein Drittel von x" | | \frac{x}{3} |
-| "Ein Drittel mehr als x" | x plus ein Drittel von x | \frac{4}{3}x |
-| "Ein Drittel weniger als x" | x minus ein Drittel von x | \frac{2}{3}x |
-
-### Verhältnis-Muster:
-"Verhältnis A : B = 3 : 2" → Wenn B = x, dann A = \frac{3}{2}x
-
-### Setup:
-1) Wähle die Person/Firma als x, von der die meisten anderen abhängen
-2) Drücke alle anderen Anteile in x aus
-3) Gleichung: Summe aller Anteile = Gesamtbetrag
-4) Löse nach x → berechne alle Anteile
-
----
-
-## [T-MISCH] Mischungsaufgaben (7.6)
-
-**Grundmenge:** G = Q⁺ × Q⁺
-
-### Kernprinzip:
-Reinmenge₁ + Reinmenge₂ = Reinmenge_Mischung
-
-Wobei: Reinmenge = Menge × \frac{Gehalt}{100}
-
-### Gehalt-Tabelle:
-| | Komp. 1 | Komp. 2 | Mischung |
-|---|---|---|---|
-| Menge (Liter/kg) | m₁ | m₂ | m₁ + m₂ |
-| Gehalt (%) | g₁ | g₂ | x |
-| Reinmenge | m₁ · g₁ | m₂ · g₂ | (m₁+m₂) · x |
-
-Gleichung: m₁ · g₁ + m₂ · g₂ = (m₁ + m₂) · x
-
-### Preis-Mischung (gleiche Logik):
-| | Sorte 1 | Sorte 2 | Mischung |
-|---|---|---|---|
-| Menge (kg) | m₁ | m₂ | m₁ + m₂ |
-| Preis/kg | p₁ | p₂ | x |
-| Gesamtpreis | m₁ · p₁ | m₂ · p₂ | (m₁+m₂) · x |
-
-### Sonderfälle:
-- Wasser hat 0% Gehalt (Verdünnung)
-- "Reines Kupfer" = 100% Gehalt
-- Verhältnis a:b → m₁ = a·k, m₂ = b·k
-
----
-
-## [T-BEWEG] Bewegung (7.8)
-
-**Grundmenge:** G = Q⁺ bzw. Q⁺ × Q⁺
-
-### Grundformel:
-$$s = v \cdot t$$
-Strecke = Geschwindigkeit × Zeit
-
-### Muster A: Gegenfahrt (aufeinander zu)
-Zwei Objekte fahren aufeinander zu:
-s₁ + s₂ = Gesamtstrecke d
-v₁ · t + v₂ · t = d (gleiche Zeit t)
-→ t = \frac{d}{v_1 + v_2}
-
-### Muster B: Verfolgung (Überholung)
-Objekt B startet Δt später, fährt schneller:
-s_A = s_B bei Überholung
-v_A · t_A = v_B · t_B, wobei t_B = t_A - Δt
-→ v_A · t = v_B · (t - Δt)
-
-### Muster C: Hin und Rückfahrt
-Gesamtstrecke = 2 · d
-Radfahrerin A fährt schneller, wendet in B, trifft B auf dem Rückweg:
-s_A + s_B = 2d
-
-### Einheiten:
-- Minuten → Stunden: ÷ 60 (z.B. 10 Min = \frac{1}{6} h)
-- km/h ist Standard → alles in km/h und Stunden rechnen
-- Entfernung vom Treffpunkt: s = v · t für das jeweilige Objekt
-
----
-
-## [T-GEO] Geometrie (7.9)
-
-**Grundmenge:** G = Q⁺ bzw. Q⁺ × Q⁺
-
-### Formeln:
-- Rechteck: A = l · b, U = 2(l + b)
-- Quadrat: A = a², U = 4a
-
-### Typisches Muster:
-1) Original: Länge = f(x), Breite = g(x), Fläche₁ = f(x) · g(x)
-2) Neu: Länge ± Δ, Breite ± Δ, Fläche₂ = (f(x) ± Δ₁)(g(x) ± Δ₂)
-3) Beziehung: Fläche₂ = Fläche₁ + k oder Fläche₂ = Fläche₁
-
-### Beispiele:
-- "3-mal so lang wie breit": l = 3x, b = x
-- "Verkürzt um 20 cm": l_neu = l - 20
-- "Vergrössert um 20 cm": b_neu = b + 20
-- Flächenvergleich: l_neu · b_neu = l · b + 800
-
-### ⚠️ Führt oft zu quadratischer Gleichung → QT-QUAD verwenden
-### ⚠️ Negative Lösung fällt weg (Länge kann nicht negativ sein)
-
----
-
-## [T-DIV] Diverses (7.10)
-
-**Grundmenge:** Hängt von Aufgabe ab
-
-### Muster A: Kosten pro Person bei Teilnehmeränderung
-- Gesamtkosten fix = G
-- Geplant: x Personen, Kosten/Person = \frac{G}{x}
-- Effektiv: (x - n) Personen, Kosten/Person = \frac{G}{x - n}
-- Beziehung: \frac{G}{x-n} = \frac{G}{x} \cdot 1.2 (z.B. 20% mehr)
-- → Bruchgleichung (QT-BRUCH)
-
-### Muster B: Treppe/Stufen
-- H = Anzahl Stufen × Höhe pro Stufe
-- Gleiche Gesamthöhe bei weniger/mehr Stufen mit anderer Stufenhöhe
-- n₁ · h₁ = n₂ · h₂
-
-### Muster C: Einkauf (Preis × Menge = Total)
-- Gesamtbetrag fix = G
-- Original: Preis p, Menge = \frac{G}{p}
-- Neu: Preis (p - Δ), Menge = \frac{G}{p - Δ} = \frac{G}{p} + n
-- → Bruchgleichung
-
-### Muster D: Geldvergleich/Schenkung
-- Person A: x CHF, Person B: y CHF
-- "Wenn A gibt B k CHF": A hat (x-k), B hat (y+k)
-- Beziehung aufstellen → Gleichungssystem
-
-### Muster E: Zwei Produkte (Kalender/Poster, Hemden, Orangen)
-- Preis₁ · Menge₁ + Preis₂ · Menge₂ = Gesamtkosten
-- Zweite Bedingung → zweite Gleichung
-- → Gleichungssystem (QT-EQ2)
-
----
-
-## [X-TRAP] Häufige Fehler — VERMEIDE DIESE
-
-### Allgemein:
-- ❌ D (Definitionsmenge) vergessen → Punktabzug!
-- ❌ Antwortsatz vergessen → Punktabzug!
-- ❌ Tabelle nicht aufgestellt → Punkte verschenkt!
-- ❌ Einheiten im Antwortsatz fehlen (CHF, Jahre, km, cm, %, Liter)
-
-### Zins (T-ZINS):
-- ❌ Marchzins: M/12 oder t/360 vergessen
-- ❌ "Prozentpunkte" mit "Prozent" verwechselt
-  - "um 0.5 Prozentpunkte höher" → p + 0.5
-  - "um 50% höher" → p · 1.5
-- ❌ Bei Zinseszins: Zins des 1. Jahres NICHT zum Kapital addiert
-- ❌ Einzahlung/Abhebung: Zeitpunkt falsch (NACH Zinsgutschrift!)
-
-### Alter (T-ALTER):
-- ❌ "5-mal so alt" als Addition statt Multiplikation gelesen
-- ❌ Zeitverschiebung nur bei einer Person angewendet (BEIDE!)
-
-### Verteilung (T-VERT):
-- ❌ "Ein Drittel weniger" = \frac{2}{3}x (NICHT x - \frac{1}{3})
-- ❌ "20% weniger als x" = 0.8x (NICHT x - 20)
-- ❌ Summe der Anteile ≠ Gesamtbetrag (Kontrolle!)
-
-### Mischung (T-MISCH):
-- ❌ Wasser = 0% Gehalt vergessen
-- ❌ Reinmenge statt Gehalt in Gleichung
-
-### Bewegung (T-BEWEG):
-- ❌ Minuten und Stunden gemischt (alles in h!)
-- ❌ Gegenfahrt vs. Verfolgung verwechselt (+ vs. =)
-
-### Geometrie (T-GEO):
-- ❌ Negative Lösung nicht ausgeschlossen
-- ❌ Ausmultiplizieren fehlerhaft bei (a+b)(c+d)
-
----
-
-## [X-FORMELN] Formelsammlung (LaTeX)
-
-### Zins:
-$$Z_{Jahr} = \frac{K \cdot p}{100}$$
-$$Z_{Monat} = \frac{K \cdot p \cdot M}{100 \cdot 12}$$
-$$Z_{Tag} = \frac{K \cdot p \cdot t}{100 \cdot 360}$$
-
-### Quadratische Gleichung (abc-Formel):
+### abc-Formel (quadratische Gleichung)
 $$x_{1,2} = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$$
 
-### Geometrie:
-$$A_{Rechteck} = l \cdot b$$
-$$U_{Rechteck} = 2(l + b)$$
-$$A_{Quadrat} = a^2$$
+### Verhältnis
+$$k = \frac{\text{Total}}{\text{Summe der Verhältnisteile}}$$
 
-### Bewegung:
-$$s = v \cdot t$$
+### Prozent
+$$\text{Anteil} = \text{Ganzes} \cdot \frac{p}{100}$$
 
-### Bruchrechnung:
-$$\frac{a}{b} + \frac{c}{d} = \frac{ad + bc}{bd}$$
+### Gleichung lösen — erlaubte Operationen
+- $[| + a]$ → auf beiden Seiten $+a$
+- $[| - a]$ → auf beiden Seiten $-a$
+- $[| \cdot a]$ → auf beiden Seiten $\cdot a$
+- $[| : a]$ → auf beiden Seiten $: a$ (nur wenn $a \neq 0$)
 
 ---
 
-## [X-GLOSSAR] Deutsche Mathe-Begriffe
+## X-GLOSS — GLOSSAR
 
-| Begriff | Bedeutung |
+| Deutsch | Mathe |
 |---|---|
-| Definitionsmenge (D) | Erlaubte Werte für x |
-| Grundmenge (G) | Zahlenbereich (N, Z, Q, R) |
-| Gleichung aufstellen | Mathematische Beziehung formulieren |
-| Ausmultiplizieren | Klammern auflösen: a(b+c) = ab + ac |
-| Zusammenfassen | Gleiche Terme vereinen |
-| Hauptnenner (HN) | Kleinster gemeinsamer Nenner |
-| Kehrwert | \frac{a}{b} → \frac{b}{a} |
-| Stellenwert | Position einer Ziffer (Einer, Zehner, Hunderter) |
-| Marchzins | Zins für weniger als 1 Jahr |
-| Prozentpunkte | Absolute Änderung des Zinssatzes |
-| Verhältnis a:b | a zu b → \frac{a}{b} |
-| Verzinst | Zins wird berechnet |
-| Zinsgutschrift | Zins wird dem Konto gutgeschrieben |
-| Vertauscht | Zinssätze/Werte werden getauscht |
-
----
-
-**ENDE SUPER-MD — Alle Informationen für KAP 7 (ohne 7.7) sind hier enthalten.**
+| Summe | $a + b$ |
+| Differenz | $a - b$ |
+| Produkt | $a \cdot b$ |
+| Quotient | $\frac{a}{b}$ |
+| aufeinanderfolgende Zahlen | $x, x+1, x+2, ...$ |
+| doppelt so viel | $2x$ |
+| halb so viel | $\frac{x}{2}$ |
+| um k grösser | $x + k$ |
+| um k kleiner | $x - k$ |
+| Verhältnis a:b | $a \cdot k$ und $b \cdot k$ |
+| Marchzins | $Z = K \cdot \frac{p}{100} \cdot \frac{M}{12}$ |
+| Definitionsmenge D | Erlaubte Werte für $x$ |
+| Lösungsmenge L | Werte, die Gleichung erfüllen |
+| Antwortsatz | Ganzer Satz als Antwort |
